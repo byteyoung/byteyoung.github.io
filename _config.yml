@@ -1,7 +1,7 @@
 # Site settings
 title: ByteYoung Blog
 SEOTitle: 杨智捷的博客 | ByteYoung Blog
-header-img: /img/byte.jpg
+header-img: img/post-bg-rwd.jpg 
 email: 438851295@qq.com
 description: "Every failure is leading towards success."
 keyword: "Byte, Byte Blog, 杨智捷的博客, ByteYoung, 杨智捷, iOS, Apple, iPhone"
@@ -12,7 +12,7 @@ github_repo: "https://github.com/byteyoung/byteyoung.github.io.git" # you code r
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "Goals determine what you going to be!"
-sidebar-avatar: /img/avatar-m      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: /img/byte.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 
@@ -24,6 +24,9 @@ github_username: byteyoung
 facebook_username:   
 jianshu_username:   
 #twitter_username:   
+
+# Disqus settings（https://disqus.com/）
+disqus_username: qiubaiying
 
 
 
