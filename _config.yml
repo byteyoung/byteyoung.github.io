@@ -1,7 +1,7 @@
 # Site settings
 title: ByteYoung Blog
 SEOTitle: 杨智捷的博客 | ByteYoung Blog
-header-img: img/post-bg-desk.jpg
+header-img: /img/byte.jpg
 email: 438851295@qq.com
 description: "Every failure is leading towards success."
 keyword: "Byte, Byte Blog, 杨智捷的博客, ByteYoung, 杨智捷, iOS, Apple, iPhone"
@@ -20,7 +20,7 @@ sidebar-avatar: /img/avatar-m      # use absolute URL, seeing it's used in both 
 RSS: false
 # weibo_username:      
 zhihu_username:     
-github_username:    
+github_username: byteyoung    
 facebook_username:   
 jianshu_username:   
 #twitter_username:   
