@@ -87,7 +87,7 @@ service-worker: true
 
 
 
-# Friends
+# About Me
 friends: [
     {
         title: "CSDN",
@@ -99,7 +99,7 @@ friends: [
         title: "Apple",
         href: "https://apple.com"
     },{
-        title: "Apple Developer",
-        href: "https://developer.apple.com/"
+        title: "QQ:438851295",
+        href: "http://qm.qq.com/cgi-bin/qm/qr?k=m49MBr9ZKmY6TYNRPQ_7o0Y966U6oqDA"
     }
 ]
