@@ -1,0 +1,101 @@
+package zuosuanfa;
+ 
+import java.util.Arrays;
+ 
+public class heapsort2 {
+    /**
+     *buildHeap从最后一个叶子结点的parent开始构建
+     *
+     * @param arr
+     * @param n 结点个数
+     */
+    public static void buildHeap(int []arr, int n) {
+        int lastNode= n-1;
+        int parent = (lastNode-1)/2;
+ 
+        for (int i = parent; i >=0 ; i--) {
+            heapify(arr ,n,i);
+ 
+        }
+ 
+    }
+ 
+ 
+    /**
+     *heapify默认i结点的孩子节点已经成大顶堆
+     * 因为buildHeap是从最后个叶子结点的parent结点开始构造
+     * 最终达到所有数成堆结构
+     * @param arr 数组
+     * @param n 总共有多少个结点
+     * @param i 对哪一个结点做heapify
+     */
+    public static void heapify(int[] arr, int n, int i ) {
+        //最后考虑递归出口
+        if(i>n){
+            return;
+        }
+        int c1 = i *2+1;
+        int c2 = i*2 +2;
+        int max = i ;
+        /**
+         * 找出最大值 ,并且不出界
+         */
+        if(c1<n&&arr[c1]>arr[max]){
+            max = c1;
+ 
+        }
+        if (c2<n&&arr[c2]>arr[max]){
+            max = c2;
+        }
+        /**
+         * 如果最大的数字不是i,则交换最大的数字,并且对孩子结点
+         * max 进行继续heapify的递归调用
+         *
+         * 程序调用自身的编程技巧称为递归（ recursion）。
+         * 一个过程或函数在其定义或说明中有直接或间接调用自身的一种方法，
+         * 它通常把一个大型复杂的问题层层转化为一个与原问题相似的规模较小的问题来求解，
+         * 递归策略只需少量的程序就可描述出解题过程所需要的多次重复计算，大大地减少了程序的代码量。
+         */
+        if (max!=i){
+            swap(arr,max , i );
+            heapify(arr,n,max);
+ 
+        }
+    }
+ 
+    /**
+     *每次堆排序成功后将第0个结点和
+     * @param arr
+     *
+     *
+     *
+     * @param n
+     */
+    public static void heapSort (int[]arr,int n ){
+        buildHeap(arr,n);
+        for (int i= n-1; i>=0 ; i--) {
+            swap(arr,i,0);
+            heapify(arr,i,0);
+        }
+ 
+    }
+ 
+ 
+    public static void main(String[] args) {
+        int[] arr  ={4,1,4,22,33,2};
+        int  n=6;
+        heapSort(arr,n);
+        System.out.println( Arrays.toString(arr) );
+ 
+    }
+ 
+    public static void swap(int[]arr,int i , int j){
+        int tem = arr[i];
+        arr[i]=arr[j];
+        arr[j]=tem;
+ 
+    }
+}
+————————————————
+版权声明：本文为CSDN博主「byteyoung」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/qq_40126686/article/details/101274539
